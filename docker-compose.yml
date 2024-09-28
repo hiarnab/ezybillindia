@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "4001:4001"
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=127.0.0.1  # Use this to connect to the host machine
+      - DB_PORT=3306                    # Default MySQL port
+      - DB_USER=phpmyadmin         # Replace with your MySQL username
+      - DB_PASSWORD=Timd@1234  # Replace with your MySQL password
+      - DB_NAME=dev_ezybill       # Replace with your database name
+    command: npm run dev  # If you're using Nodemon, or npm start for production
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Raleway:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+
+
+.pricing svg path:last-child {
+  fill: white;
+}
+
+.pricing_ul li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(5, 45, 57, 0.17) 0%, rgba(5, 45, 57, 0) 81.82%);
+}
+
+.red svg path:last-child {
+  fill: rgb(255, 255, 255);
+}
+
+.batch {
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 100px 100px;
+  background: #b90fb9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.batch span strong {
+  font-size: 20px;
+  font-weight: 800;
+  font-style: normal;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.batch span {
+  color: rgb(230, 225, 225);
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .3px;
+}
+
+/* width */
+.modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.modal::-webkit-scrollbar-thumb {
+  background: #800080;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #800080;
+}
+
+.qr_code:hover .qr_overlay {
+  opacity: 1;
+  background: rgb(126,0,126);
+background: linear-gradient(0deg, rgba(126,0,126,1) 0%, rgba(255,255,255,0) 75%);
+
+  
+}
+.qr_code:hover .new  {
+  scale: 1;
+  
+  
+}
+/* .qr_code::before{
+  content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity:.2;
+    border-radius: 5px;
+    transition: all 900ms ease;
+    -moz-transition: all 900ms ease;
+    -webkit-transition: all 900ms ease;
+    -ms-transition: all 900ms ease;
+    -o-transition: all 900ms ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-transform-origin: right center;
+    -ms-transform-origin: right center;
+    transform-origin: right center;
+    background-position: center center;
+    z-index: 1;
+}
+.qr_code:hover :before{
+  opacity: 1;
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.content .box {
+  break-inside: avoid;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.content {
+  columns: 4;
+  width: calc(100% - 40px);
+}
+@media (max-width: 1427px) {
+  .content {
+    columns: 4;
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 1200px) {
+  .content {
+    columns: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content {
+    columns: 3;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 786px) {
+  .content {
+    columns: 2;
+  }
+  .links{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    columns: 1;
+  }
+}
+
+.content .box img {
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}

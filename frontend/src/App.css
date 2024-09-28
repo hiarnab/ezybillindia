@@ -1,0 +1,28 @@
+.carousel .control-dots {
+  position: absolute;
+  bottom: 0;
+  margin: 0px !important;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  /* top: 10px; */
+}
+
+.carousel .control-dots .dot {
+  opacity: 3 !important;
+}
+
+.stk{
+  width: auto !important;
+} 
+
+#stick .sticky{
+  transform: translateZ(0px);
+    top: 7rem !important;
+    width: 0px;
+    position: fixed;
+}
+/* .carousel-root{
+  width: 100vw !important;
+} */
